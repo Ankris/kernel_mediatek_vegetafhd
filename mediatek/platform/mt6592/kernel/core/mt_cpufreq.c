@@ -137,17 +137,17 @@ static struct early_suspend mt_cpufreq_early_suspend_handler =
 };
 #endif
 
-#define DVFS_F0_1   (2002000)   // KHz
+#define DVFS_F0_1   (1664000)   // KHz
 //#define DVFS_F0_2   (1599000)   // KHz
 //#define DVFS_F0_3   (1495000)   // KHz
 //#define DVFS_F0_4   (1391000)   // KHz
-#define DVFS_F0     (1664000)   // KHz
-#define DVFS_F1     (1495000)   // KHz
-#define DVFS_F2     (1365000)   // KHz
-#define DVFS_F3     (1248000)   // KHz
-#define DVFS_F4     (1144000)   // KHz
-#define DVFS_F5     ( 845000)   // KHz
-#define DVFS_F6     ( 728000)   // KHz
+#define DVFS_F0     (1495000)   // KHz
+#define DVFS_F1     (1365000)   // KHz
+#define DVFS_F2     (1248000)   // KHz
+#define DVFS_F3     (1144000)   // KHz
+#define DVFS_F4     (845000)   // KHz
+#define DVFS_F5     ( 728000)   // KHz
+#define DVFS_F6     ( 433000)   // KHz
 
 #if defined(HQA_LV_1_09V)
     #define DVFS_V0     (1200)  // mV
@@ -205,10 +205,10 @@ static struct early_suspend mt_cpufreq_early_suspend_handler =
 /*********************
 * GPU Frequency List
 **********************/
-#define GPU_DVFS_F0     (700000)   // KHz
-#define GPU_DVFS_F0_1   (600000)   // KHz
-#define GPU_DVFS_F1     (500000)   // KHz
-#define GPU_DVFS_F2     (250000)   // KHz
+#define GPU_DVFS_F0     (550000)   // KHz
+#define GPU_DVFS_F0_1   (450000)   // KHz
+#define GPU_DVFS_F1     (250000)   // KHz
+#define GPU_DVFS_F2     (050000)   // KHz
 
 /*********************
 * MM Frequency List
