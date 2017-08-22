@@ -1755,7 +1755,7 @@ try_to_wake_up(struct task_struct *p, unsigned int state, int wake_flags)
 		if (ttwu_activate_remote(p, wake_flags))
 			goto stat;
 #else
-		cpu_read_relax();();
+		cpu_read_relax();
 #endif
 	}
 	/*
