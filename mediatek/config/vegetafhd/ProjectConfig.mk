@@ -794,7 +794,7 @@ MTK_HUIYOU_WABAOJINGYING_APP=no
 MTK_HWC_SUPPORT=yes
 MTK_HWC_VERSION=1.2
 MTK_HWUI_SUPPORT=yes
-MTK_HW_ENHANCE=no
+MTK_HW_ENHANCE=yes
 
 # Add a feature option to enable HW key remapping for HOME/BACK/MENU keys.
 MTK_HW_KEY_REMAPPING=no
@@ -969,7 +969,7 @@ MTK_MT8193_NFI_SUPPORT=no
 MTK_MT8193_SUPPORT=no
 
 # yes: to include MTKLogger
-MTK_MTKLOGGER_SUPPORT=yes
+MTK_MTKLOGGER_SUPPORT=no
 
 # enable/disable ogm and mtkps playback feature
 MTK_MTKPS_PLAYBACK_SUPPORT=no
