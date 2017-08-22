@@ -13,6 +13,8 @@
 #include <linux/smp.h>
 #include <linux/cpu.h>
 
+#include <asm/relaxed.h>
+
 #ifdef CONFIG_USE_GENERIC_SMP_HELPERS
 static struct {
 	struct list_head	queue;
@@ -106,7 +108,7 @@ static int csd_lock_wait(struct call_single_data *data)
 {
 	int cpu, nr_online_cpus = 0;
 
-	while (data->flags & CSD_FLAG_LOCK) {
+	while (cpu_relaxed_read_short(&data->flags)  & CSD_FLAG_LOCK) {
 		for_each_cpu(cpu, data->cpumask) {
 			if (cpu_online(cpu)) {
 				nr_online_cpus++;
@@ -114,7 +116,7 @@ static int csd_lock_wait(struct call_single_data *data)
 		}
 		if (!nr_online_cpus)
 			return -ENXIO;
-		cpu_relax();
+		cpu_read_relax();
 	}
 
 	return 0;
