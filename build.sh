@@ -1,8 +1,6 @@
 CUR_DIR=$(pwd)
-MAKEJOBS=4
+MAKEJOBS=1
 
-rm flasher/zImage
 ./makeMtk -t vegetafhd n k
 cd $CUR_DIR
-cp out/Download/flash/kernel_vegetafhd.bin ./flasher/zImage
-cd flasher; zip -r ../out/flasher.zip $(pwd); cd ..;
+cp out/target/product/vegetafhd/obj/KERNEL_OBJ/arch/arm/boot/zImage ./zImage
