@@ -1,4 +1,5 @@
 CUR_DIR=$(pwd)
+MAKEJOBS=4
 
 rm flasher/zImage
 ./makeMtk -t vegetafhd n k
